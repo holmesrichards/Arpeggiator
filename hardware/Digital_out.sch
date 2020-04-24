@@ -1,0 +1,419 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R7
+U 1 1 5E84CAC8
+P 2825 2850
+F 0 "R7" V 2618 2850 50  0000 C CNN
+F 1 "1k" V 2709 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2755 2850 50  0001 C CNN
+F 3 "~" H 2825 2850 50  0001 C CNN
+	1    2825 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5E84CACE
+P 3475 2300
+F 0 "R8" H 3405 2254 50  0000 R CNN
+F 1 "1k" H 3405 2345 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3405 2300 50  0001 C CNN
+F 3 "~" H 3475 2300 50  0001 C CNN
+	1    3475 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q2
+U 1 1 5E84CAD4
+P 3375 2850
+F 0 "Q2" H 3565 2896 50  0000 L CNN
+F 1 "2N3904" H 3565 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3575 2775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 3375 2850 50  0001 L CNN
+	1    3375 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 3475 1950 1    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR018
+U 1 1 5E84CADB
+P 3475 3500
+F 0 "#PWR018" H 3475 3250 50  0001 C CNN
+F 1 "GND" H 3480 3327 50  0000 C CNN
+F 2 "" H 3475 3500 50  0001 C CNN
+F 3 "" H 3475 3500 50  0001 C CNN
+	1    3475 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3475 1950 3475 2150
+Wire Wire Line
+	3475 2450 3475 2550
+Wire Wire Line
+	2975 2850 3175 2850
+Wire Wire Line
+	2675 2850 2475 2850
+Wire Wire Line
+	3475 2550 3825 2550
+Connection ~ 3475 2550
+Wire Wire Line
+	3475 2550 3475 2650
+Wire Wire Line
+	3475 3050 3475 3500
+$Comp
+L power:GND #PWR025
+U 1 1 5E84CB0E
+P 7200 3200
+F 0 "#PWR025" H 7200 2950 50  0001 C CNN
+F 1 "GND" H 7205 3027 50  0000 C CNN
+F 2 "" H 7200 3200 50  0001 C CNN
+F 3 "" H 7200 3200 50  0001 C CNN
+	1    7200 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5E84CB14
+P 7200 2700
+F 0 "#PWR024" H 7200 2450 50  0001 C CNN
+F 1 "GND" H 7200 2550 50  0000 C CNN
+F 2 "" H 7200 2700 50  0001 C CNN
+F 3 "" H 7200 2700 50  0001 C CNN
+	1    7200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 5E84CB1A
+P 7400 2600
+F 0 "J9" H 7480 2592 50  0000 L CNN
+F 1 "Note gate" H 7480 2501 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7400 2600 50  0001 C CNN
+F 3 "~" H 7400 2600 50  0001 C CNN
+	1    7400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 5E84CB20
+P 7400 3100
+F 0 "J10" H 7480 3092 50  0000 L CNN
+F 1 "Start gate" H 7480 3001 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 7400 3100 50  0001 C CNN
+F 3 "~" H 7400 3100 50  0001 C CNN
+	1    7400 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 3100 7200 3100
+Wire Wire Line
+	7100 2600 7200 2600
+Text HLabel 2475 2850 0    50   Input ~ 0
+D3
+Text Label 3725 2550 0    50   ~ 0
+NOTE_GATE
+Text Label 7150 2600 2    50   ~ 0
+NOTE_GATE
+Text Label 7150 3100 2    50   ~ 0
+START_GATE
+Text Notes 7100 7050 0    100  ~ 0
+cc-ba-sa\nVincezno Pacella shadux@shaduzlabs.com\nRich Holmes rs.holmes@gmail.com
+Text Label 5725 2550 0    50   ~ 0
+START_GATE
+Text HLabel 4475 2850 0    50   Input ~ 0
+D4
+Wire Wire Line
+	5475 3050 5475 3500
+Wire Wire Line
+	5475 2550 5475 2650
+Wire Wire Line
+	5475 2550 5825 2550
+Wire Wire Line
+	4675 2850 4475 2850
+Wire Wire Line
+	4975 2850 5175 2850
+Connection ~ 5475 2550
+Wire Wire Line
+	5475 2450 5475 2550
+Wire Wire Line
+	5475 1950 5475 2150
+$Comp
+L power:GND #PWR023
+U 1 1 5E84CAFE
+P 5475 3500
+F 0 "#PWR023" H 5475 3250 50  0001 C CNN
+F 1 "GND" H 5480 3327 50  0000 C CNN
+F 2 "" H 5475 3500 50  0001 C CNN
+F 3 "" H 5475 3500 50  0001 C CNN
+	1    5475 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5475 1950 1    50   Input ~ 0
+VCC
+$Comp
+L Transistor_BJT:2N3904 Q3
+U 1 1 5E84CAF7
+P 5375 2850
+F 0 "Q3" H 5565 2896 50  0000 L CNN
+F 1 "2N3904" H 5565 2805 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 5575 2775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5375 2850 50  0001 L CNN
+	1    5375 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5E84CAF1
+P 5475 2300
+F 0 "R10" H 5405 2254 50  0000 R CNN
+F 1 "1k" H 5405 2345 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5405 2300 50  0001 C CNN
+F 3 "~" H 5475 2300 50  0001 C CNN
+	1    5475 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5E84CAEB
+P 4825 2850
+F 0 "R9" V 4618 2850 50  0000 C CNN
+F 1 "1k" V 4709 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4755 2850 50  0001 C CNN
+F 3 "~" H 4825 2850 50  0001 C CNN
+	1    4825 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xx:74HC595 U3
+U 1 1 5EA2A07D
+P 2900 4900
+F 0 "U3" H 2900 5681 50  0000 C CNN
+F 1 "74HC595" H 2900 5590 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 2900 4900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 2900 4900 50  0001 C CNN
+	1    2900 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC595 U4
+U 1 1 5EA2A7A0
+P 4700 4900
+F 0 "U4" H 4700 5681 50  0000 C CNN
+F 1 "74HC595" H 4700 5590 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 4700 4900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 4700 4900 50  0001 C CNN
+	1    4700 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 4500 2150 4500
+Wire Wire Line
+	2500 4700 2275 4700
+Text GLabel 2500 4800 0    50   Input ~ 0
+VCC
+Wire Wire Line
+	2500 5000 2400 5000
+$Comp
+L power:GND #PWR016
+U 1 1 5EA2BEFE
+P 2500 5100
+F 0 "#PWR016" H 2500 4850 50  0001 C CNN
+F 1 "GND" H 2505 4927 50  0000 C CNN
+F 2 "" H 2500 5100 50  0001 C CNN
+F 3 "" H 2500 5100 50  0001 C CNN
+	1    2500 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5EA2C77B
+P 2900 5600
+F 0 "#PWR017" H 2900 5350 50  0001 C CNN
+F 1 "GND" H 2905 5427 50  0000 C CNN
+F 2 "" H 2900 5600 50  0001 C CNN
+F 3 "" H 2900 5600 50  0001 C CNN
+	1    2900 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 2650 3975 1    50   Input ~ 0
+VCC
+Wire Wire Line
+	3300 5400 3975 5400
+Wire Wire Line
+	3975 5400 3975 4500
+Wire Wire Line
+	3975 4500 4300 4500
+Text GLabel 4300 4800 0    50   Input ~ 0
+VCC
+$Comp
+L power:GND #PWR020
+U 1 1 5EA2D416
+P 4300 5100
+F 0 "#PWR020" H 4300 4850 50  0001 C CNN
+F 1 "GND" H 4305 4927 50  0000 C CNN
+F 2 "" H 4300 5100 50  0001 C CNN
+F 3 "" H 4300 5100 50  0001 C CNN
+	1    4300 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5EA2D811
+P 4700 5600
+F 0 "#PWR021" H 4700 5350 50  0001 C CNN
+F 1 "GND" H 4705 5427 50  0000 C CNN
+F 2 "" H 4700 5600 50  0001 C CNN
+F 3 "" H 4700 5600 50  0001 C CNN
+	1    4700 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5000 2400 5850
+Wire Wire Line
+	2400 5850 4200 5850
+Wire Wire Line
+	4200 5850 4200 5000
+Wire Wire Line
+	4200 5000 4300 5000
+Connection ~ 2400 5000
+Wire Wire Line
+	2400 5000 2150 5000
+Wire Wire Line
+	2275 4700 2275 6000
+Wire Wire Line
+	2275 6000 4050 6000
+Wire Wire Line
+	4050 6000 4050 4700
+Wire Wire Line
+	4050 4700 4300 4700
+Connection ~ 2275 4700
+Wire Wire Line
+	2275 4700 2150 4700
+NoConn ~ 5100 5000
+NoConn ~ 5100 5100
+NoConn ~ 5100 5200
+$Comp
+L Connector_Generic:Conn_01x08 J7
+U 1 1 5EA31B09
+P 3500 4800
+F 0 "J7" H 3580 4792 50  0000 L CNN
+F 1 "Conn_01x08" H 3580 4701 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3500 4800 50  0001 C CNN
+F 3 "~" H 3500 4800 50  0001 C CNN
+	1    3500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J8
+U 1 1 5EA325EB
+P 5450 4700
+F 0 "J8" H 5530 4692 50  0000 L CNN
+F 1 "Conn_01x06" H 5530 4601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5450 4700 50  0001 C CNN
+F 3 "~" H 5450 4700 50  0001 C CNN
+	1    5450 4700
+	1    0    0    -1  
+$EndComp
+Text HLabel 2150 4500 0    50   Input ~ 0
+D5
+Text HLabel 2150 4700 0    50   Input ~ 0
+D6
+Text HLabel 2150 5000 0    50   Input ~ 0
+D7
+Text GLabel 4450 3975 1    50   Input ~ 0
+VCC
+Wire Wire Line
+	2650 3975 2650 4125
+Wire Wire Line
+	2650 4300 2900 4300
+Wire Wire Line
+	4450 4300 4700 4300
+Wire Wire Line
+	4450 3975 4450 4125
+$Comp
+L Device:C C5
+U 1 1 5EA37E35
+P 2500 4125
+F 0 "C5" V 2248 4125 50  0000 C CNN
+F 1 "0.1uF" V 2339 4125 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 2538 3975 50  0001 C CNN
+F 3 "~" H 2500 4125 50  0001 C CNN
+	1    2500 4125
+	0    1    1    0   
+$EndComp
+Connection ~ 2650 4125
+Wire Wire Line
+	2650 4125 2650 4300
+$Comp
+L Device:C C6
+U 1 1 5EA38A71
+P 4300 4125
+F 0 "C6" V 4048 4125 50  0000 C CNN
+F 1 "0.1uF" V 4139 4125 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 4338 3975 50  0001 C CNN
+F 3 "~" H 4300 4125 50  0001 C CNN
+	1    4300 4125
+	0    1    1    0   
+$EndComp
+Connection ~ 4450 4125
+Wire Wire Line
+	4450 4125 4450 4300
+$Comp
+L power:GND #PWR015
+U 1 1 5EA391F3
+P 2350 4125
+F 0 "#PWR015" H 2350 3875 50  0001 C CNN
+F 1 "GND" H 2355 3952 50  0000 C CNN
+F 2 "" H 2350 4125 50  0001 C CNN
+F 3 "" H 2350 4125 50  0001 C CNN
+	1    2350 4125
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5EA3980C
+P 4150 4125
+F 0 "#PWR019" H 4150 3875 50  0001 C CNN
+F 1 "GND" H 4155 3952 50  0000 C CNN
+F 2 "" H 4150 4125 50  0001 C CNN
+F 3 "" H 4150 4125 50  0001 C CNN
+	1    4150 4125
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5100 5400
+Wire Wire Line
+	5100 4500 5250 4500
+Wire Wire Line
+	5100 4600 5250 4600
+Wire Wire Line
+	5100 4700 5250 4700
+Wire Wire Line
+	5100 4800 5250 4800
+$Comp
+L power:GND #PWR022
+U 1 1 5EA521C5
+P 5250 5000
+F 0 "#PWR022" H 5250 4750 50  0001 C CNN
+F 1 "GND" H 5255 4827 50  0000 C CNN
+F 2 "" H 5250 5000 50  0001 C CNN
+F 3 "" H 5250 5000 50  0001 C CNN
+	1    5250 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4900 5250 4900
+$EndSCHEMATC
