@@ -12,27 +12,29 @@ So an arpeggiator needs:
 
 You can use the LMNC sequencer with my modifications to do some of that, but it requires you to enter each note as a knob setting. A distinguishing feature of an arpeggiator should be to allow you to more easily and quickly specify the notes to use. For instance the KeyStep arpeggiator just takes all the notes held down on the keyboard simultaneously. That would be problematic with a non MIDI module — unless it had a mini keyboard on the front panel. 
 
-2HP Arp http://www.twohp.com/modules/arp
+Some arps on the market:
+
+**2HP Arp http://www.twohp.com/modules/arp**
 uses knobs (apparently potentiometers) + CV to select chord and mode (ordering). Chords are: Major, Major 7, Dominant 7, Minor, Minor 7, Diminished, Half Diminished 7, Full Diminished 7, Augmented, Augmented 7, Sus 4, Sus 4 Maj 7, Sus 4 Min 7. Modes are: Ascending one octave, Ascending two octaves, Descending one octave, Descending two octaves, Pendulum one octave, Pendulum two octaves, Random one octave, Random two octaves
 
-Flame Arpeggiator 2013
-Flame Chord Machine II 
+**Flame Arpeggiator 2013**
+**Flame Chord Machine II **
 has on-panel push button keyboard, CV for arp functions. 2013 has 2x16 display and a knob apparently.
 
-Barton CV Arpeggiator
+**Barton CV Arpeggiator**
 knobs/CV control range (1 to 5 octaves), mode (Up/Down (exclusive?), Up Repeating, Down Repeating, Pendulum (inclusive?), Up and stay, Down and stay, Random), and chord (basically you can get any combination of root, 3rd (major/minor/no), 5th (perfect/no), 7th (major, minor, no) (so no augmented or diminished...)).
 
-KeyStep:
+**KeyStep**
 modes are Up, Down, Inclusive, Exclusive, Random, Order, Up x2, Down x2
 
 How about this?
 
-Inputs:
+##Inputs:
 
 - CV: input for root. Press a keyboard key and change chord root. (KeyStep can't do this! Though maybe can achieve it using 2nd MIDI keyboard...)
 - Clock
 
-Controls:
+##Controls:
 
 - 12 push buttons + rotary switch to select notes, order, and range (requires mux/demux) - e.g. in note mode push buttons 1-12 toggle notes, in chord mode they select chord, in order mode they select order, in range mode they select range, rotary switch selects mode. Adjacent LEDs show setting.
 
@@ -58,7 +60,7 @@ Controls:
 Originally this was going to just use the dacarduino board, but the current design needs fewer gates and CVs than it provides but needs a pair of shift registers to handle the LEDs. Tempting though it is to try to stuff the shift registers into the dacarduino design, they probably would not be used often enough to justify it. So the arpeggiator uses its own board, based on but different from dacarduino.
 
 
-Outputs:
+##Outputs:
 
 - CV
 - Note (gate)
@@ -69,7 +71,7 @@ Arduino pin needs:
 Analog in:
 
 - CV In (protected)
-- Buttons and rotary switch (unprotected)
+- Buttons and rotary switch (unprotected; wire as resistor ladder)
 
 Analog out:
 
@@ -86,4 +88,3 @@ Digital out:
 - 3 pins for LED shift registers
 
 Total 3 analog pins, 6 digital
-
