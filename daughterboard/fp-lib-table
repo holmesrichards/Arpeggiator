@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Arpeggiator_Daughterboard)(type KiCad)(uri ${KIPRJMOD}/Arpeggiator_Daughterboard.pretty)(options "")(descr ""))
+)

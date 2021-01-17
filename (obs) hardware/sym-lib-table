@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name EurorackRSH)(type Legacy)(uri ${KIPRJMOD}/EurorackRSH.lib)(options "")(descr ""))
+  (lib (name arpeggiator)(type Legacy)(uri ${KIPRJMOD}/arpeggiator.lib)(options "")(descr ""))
+)
